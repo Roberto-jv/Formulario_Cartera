@@ -1,0 +1,21 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recibir los datos del formulario
+    $numero_credito = htmlspecialchars($_POST['numero_credito']);
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $fecha = htmlspecialchars($_POST['fecha']);
+    $importe = htmlspecialchars($_POST['importe']);
+
+    // Aquí puedes agregar la lógica para procesar los datos recibidos
+    // Por ejemplo, guardarlos en una base de datos o realizar alguna otra acción
+
+    // Para este ejemplo, solo mostraremos los datos recibidos
+    echo "<h1>Datos recibidos:</h1>";
+    echo "Número de Crédito: " . $numero_credito . "<br>";
+    echo "Nombre: " . $nombre . "<br>";
+    echo "Fecha: " . $fecha . "<br>";
+    echo "Importe: " . $importe . "<br>";
+} else {
+    echo "No se recibieron datos del formulario.";
+}
+?>
